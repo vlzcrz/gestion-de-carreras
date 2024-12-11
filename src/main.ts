@@ -14,7 +14,7 @@ async function bootstrap() {
           join(__dirname, 'proto/career.proto'),
           join(__dirname, 'proto/subject.proto'),
         ],
-        url: 'localhost:5000',
+        url: 'localhost:5001',
       },
     },
   );
