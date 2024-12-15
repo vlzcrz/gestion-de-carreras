@@ -8,3 +8,14 @@ services:
       - 27018:27017
     volumes:
       - ./mongo:/data/db
+#  career-microservice:
+#    build:
+#      context: ./ # Ruta donde está tu proyecto NestJS
+#      dockerfile: Dockerfile # Asegúrate de tener un Dockerfile en esta ruta
+#    restart: always
+#    ports:
+#      - 5001:5001 # Puerto de tu servicio NestJS
+#    environment:
+#      - MONGO_URI=mongodb://mongo:27017/gestion-de-carreras
+#    depends_on:
+#      - mongo

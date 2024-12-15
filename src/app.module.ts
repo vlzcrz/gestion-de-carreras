@@ -1,11 +1,13 @@
 import { Module } from '@nestjs/common';
 import { CareerModule } from './career/career.module';
 import { MongooseModule } from '@nestjs/mongoose';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost:27018/gestion-de-carreras'),
     CareerModule,
+    ConfigModule.forRoot(),
+    MongooseModule.forRoot(process.env.MONGO_URI),
   ],
   controllers: [],
   providers: [],
